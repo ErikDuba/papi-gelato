@@ -27,4 +27,4 @@ while i == 1:
     else:
         print('Sorry, dat begrijp ik niet...')
         continue
-  input('')
+input('')
