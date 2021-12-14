@@ -1,8 +1,15 @@
 print('Welkom bij Papi Gelato!')
+##print('---------["Papi Gelato"]---------\n')
+#print('Bolletjes    ' + bolletjes + ' x  €' + costBolletje + '    = ' + totalBolletje)
+#print('Hoorntje     1  x  €' + costHoorn + '    = ' + costHoorn')
+#print('Bakje        1  x  €' + costBakje + '    = ' + costBakje)
 
 i = 1
 while i == 1:
     a = 1
+
+
+    
     bolletjes = int(input('Hoeveel bolletjes wilt u?: '))
     if 1 <= bolletjes <= 3:
         keuze1 = input('Wilt u deze ' + str(bolletjes) + ' in (A) een hoorntje of (B) een bakje? A/B: ')
@@ -11,6 +18,14 @@ while i == 1:
             if keuze2 == 'J':
                 continue
             elif keuze2 == 'N':
+                costBolletje = 1.1
+                costHoorn = 1.25
+                costBakje = 0.75
+                totalBolletje = costBolletje + bolletjes
+                print('---------["Papi Gelato"]---------\n')
+                print(str('Bolletjes    ' + bolletjes + ' x  €' + costBolletje + '    = ' + totalBolletje))
+                print(str('Hoorntje     1  x  €' + costHoorn + '    = ' + costHoorn))
+                print(str('Bakje        1  x  €' + costBakje + '    = ' + costBakje))
                 print('Bedankt en tot ziens!')
                 break
         elif keuze1 == 'B':
@@ -52,8 +67,10 @@ while i == 1:
     elif bolletjes > 8:
         print('Sorry, zulke grote bakken hebben we niet')
         continue
+    elif bolletjes == 0:
+        break
     else:
         print('Sorry, dat begrijp ik niet...')
         continue
-    
+
 input('')
