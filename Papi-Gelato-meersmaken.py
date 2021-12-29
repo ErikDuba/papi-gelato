@@ -1,32 +1,39 @@
 print('Welkom bij Papi Gelato!')
-##print('---------["Papi Gelato"]---------\n')
+#print('---------["Papi Gelato"]---------\n')
 #print('Bolletjes    ' + bolletjes + ' x  €' + costBolletje + '    = ' + totalBolletje)
 #print('Hoorntje     1  x  €' + costHoorn + '    = ' + costHoorn')
 #print('Bakje        1  x  €' + costBakje + '    = ' + costBakje)
-
-i = 1
-while i == 1:
-    a = 1
+#print('Totaal                                    = €')
 
 
-    
+while True:    
+    costBolletje = 1.1
+    costHoorn = 1.25
+    costBakje = 0.75 
     bolletjes = int(input('Hoeveel bolletjes wilt u?: '))
     if 1 <= bolletjes <= 3:
         keuze1 = input('Wilt u deze ' + str(bolletjes) + ' in (A) een hoorntje of (B) een bakje? A/B: ')
         if keuze1 == 'A':
             keuze2 = input('Hier is uw hoorntje met ' + str(bolletjes) + ' bolletje(s). Wilt u nog meer bestellen? (J/N): ')
             if keuze2 == 'J':
+                totalBolletje = costBolletje * bolletjes
+                totalAll1 = totalBolletje + costHoorn 
+                print('---------["Papi Gelato"]---------\n')
+                print(str('Bolletjes    ' + str(bolletjes) + ' x  €' + str(costBolletje) + '    = €' + str(totalBolletje)))
+                print(str('Hoorntje     1 x  €' + str(costHoorn) + '   = €' + str(costHoorn)))
+                print('                          ------- +')  
+                print(str('Totaal                    = €' + str(totalAll1)))            
+                print('---------------------------------\nWelkom terug!')                
                 continue
             elif keuze2 == 'N':
-                costBolletje = 1.1
-                costHoorn = 1.25
-                costBakje = 0.75
-                totalBolletje = costBolletje + bolletjes
+                totalBolletje = costBolletje * bolletjes
+                totalAll1 = totalBolletje + costHoorn 
                 print('---------["Papi Gelato"]---------\n')
-                print(str('Bolletjes    ' + bolletjes + ' x  €' + costBolletje + '    = ' + totalBolletje))
-                print(str('Hoorntje     1  x  €' + costHoorn + '    = ' + costHoorn))
-                print(str('Bakje        1  x  €' + costBakje + '    = ' + costBakje))
-                print('Bedankt en tot ziens!')
+                print(str('Bolletjes    ' + str(bolletjes) + ' x  €' + str(costBolletje) + '    = €' + str(totalBolletje)))
+                print(str('Hoorntje     1 x  €' + str(costHoorn) + '   = €' + str(costHoorn)))
+                print('                          ------- +')  
+                print(str('Totaal                    = €' + str(totalAll1)))            
+                print('---------------------------------\nBedankt en tot ziens!')
                 break
         elif keuze1 == 'B':
             keuze3 = input('Hier is uw bakje met ' + str(bolletjes) + ' bolletje(s). Wilt u nog meer bestellen? (J/N): ')
@@ -36,7 +43,7 @@ while i == 1:
                 print ('Bedankt en tot ziens!') 
                 break
     elif 4 <= bolletjes <= 8:
-        while a == 1:
+        while True:
             smaak2 = input('Wij hebben (A) Aardbei, (C) Chocolade, (M) Munt of (V) Vanille.\nIn welke smaak wilt u deze bolletjes? A/C/M/V: ')
             if smaak2 == 'A':
                 keuze4 = input('Dan krijgt u van mij een bakje met ' + str(bolletjes) + ' bolletjes aardbei. Wilt u nog meer bestellen? (J/N): ')
@@ -67,8 +74,6 @@ while i == 1:
     elif bolletjes > 8:
         print('Sorry, zulke grote bakken hebben we niet')
         continue
-    elif bolletjes == 0:
-        break
     else:
         print('Sorry, dat begrijp ik niet...')
         continue
